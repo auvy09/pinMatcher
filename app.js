@@ -47,3 +47,19 @@ document.getElementById('calculator').addEventListener('click', function (event)
     }
 
 })
+
+document.getElementById('btn-submit').addEventListener('click', function () {
+    const displayPinField = document.getElementById('display-pin');
+    const TypedPinField = document.getElementById('typed-number');
+    const pinSuccess = document.getElementById('pin-success');
+    const pinFail = document.getElementById('pin-fail');
+    if (displayPinField.value === TypedPinField.value) {
+        pinFail.style.display = 'none';
+        pinSuccess.style.display = 'block';
+    }
+    else {
+        pinSuccess.style.display = 'none';
+        pinFail.style.display = 'block';
+    }
+
+})
